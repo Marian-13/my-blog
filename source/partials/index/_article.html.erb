@@ -1,0 +1,19 @@
+<%# locals: article %>
+
+<div class="post-preview">
+  <% link_to article.url do %>
+    <h2 class="post-title">
+      <%= title_of_article(article) %>
+    </h2>
+
+    <h3 class="post-subtitle">
+      <%= subtitle_of_article(article) %>
+    </h3>
+  <% end %>
+
+  <p class="post-meta">
+    Posted by <%= link_to author_of_article(article), root_url %> on <%= date_of_article(article) %>
+  </p>
+</div>
+
+<hr>

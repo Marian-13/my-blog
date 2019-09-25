@@ -19,16 +19,27 @@ page '/*.txt', layout: false
 ###
 # Helpers
 ###
+# Helpers can access methods from other helpers
+require_relative 'lib/application_helpers'
+helpers ApplicationHelpers
+
+require_relative 'lib/article_helpers'
+helpers ArticleHelpers
+
+###
+# Extentions
+###
+activate :pry
 
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
-  # blog.prefix = "blog"
+  blog.prefix = 'articles'
 
   # blog.permalink = "{year}/{month}/{day}/{title}.html"
   # Matcher for blog source files
   # blog.sources = "{year}-{month}-{day}-{title}.html"
   # blog.taglink = "tags/{tag}.html"
-  # blog.layout = "layout"
+  blog.layout = 'layouts/layout'
   # blog.summary_separator = /(READMORE)/
   # blog.summary_length = 250
   # blog.year_link = "{year}.html"
@@ -40,9 +51,9 @@ activate :blog do |blog|
   blog.calendar_template = "calendar.html"
 
   # Enable pagination
-  # blog.paginate = true
-  # blog.per_page = 10
-  # blog.page_link = "page/{num}"
+  blog.paginate = true
+  blog.per_page = 2
+  blog.page_link = "page/{num}"
 end
 
 page "/feed.xml", layout: false

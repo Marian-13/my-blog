@@ -1,24 +1,24 @@
 ---
-pageable: true
-per_page: 10
 ---
-<% if paginate && num_pages > 1 %>
-  <p>Page <%= page_number %> of <%= num_pages %></p>
 
-  <% if prev_page %>
-    <p><%= link_to 'Previous page', prev_page %></p>
-  <% end %>
+<% content_for :page_header_content do %>
+  <div class="site-heading">
+    <h1>Clean Blog</h1>
+    <span class="subheading">A Blog Theme by Start Bootstrap</span>
+  </div>
 <% end %>
 
-<% page_articles.each_with_index do |article, i| %>
-  <h2><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></h2>
-  <!-- use article.summary(250) if you have Nokogiri available to show just
-       the first 250 characters -->
-  <%= article.body %>
-<% end %>
+<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <% blog.articles[0...10].each do |article| %>
+        <%= partial 'partials/index/article', locals: { article: article } %>
+      <% end %>
 
-<% if paginate %>
-  <% if next_page %>
-    <p><%= link_to 'Next page', next_page %></p>
-  <% end %>
-<% end %>
+      <%= partial 'partials/index/pager' %>
+    </div>
+  </div>
+</div>
+
+<hr>
