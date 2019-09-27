@@ -1,0 +1,19 @@
+<% content_for :css do %>
+  <style>
+    .skype-button:hover .fa-stack {
+      color: #0085A1;
+    }
+  </style>
+<% end %>
+
+<% content_for :js do %>
+  <!-- Skype -->
+  <script src="https://swc.cdn.skype.com/sdk/v1/sdk.min.js"></script>
+<% end %>
+
+<div class="skype-button" data-contact-id="marian.kostyk">
+  <span class="fa-stack fa-lg" >
+    <i class="fas fa-circle fa-stack-2x"></i>
+    <i class="fab fa-skype fa-stack-1x fa-inverse"></i>
+  </span>
+</div>

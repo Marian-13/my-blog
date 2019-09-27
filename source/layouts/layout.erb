@@ -22,16 +22,12 @@
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/a8cb7c533c.js" crossorigin="anonymous"></script>
+
+    <!-- Custom CSS -->
+    <%= yield_content :css %>
   </head>
   <body>
-    <%= partial 'partials/navigation' %>
-    <%= partial 'partials/page_header' %>
-
-    <div id="main" role="main">
-      <%= yield %>
-    </div>
-
-    <%= partial 'partials/footer' %>
+    <%= yield %>
 
     <!-- Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -40,5 +36,8 @@
 
     <!-- Clean Blog -->
     <%= javascript_include_tag 'javascripts/clean-blog' %>
+
+    <!-- Custom JS -->
+    <%= yield_content :js %>
   </body>
 </html>
