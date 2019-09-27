@@ -12,6 +12,7 @@ GEM
     backports (3.15.0)
     builder (3.2.3)
     byebug (11.0.1)
+    classnames (1.0.0)
     coderay (1.1.2)
     coffee-script (2.4.1)
       coffee-script-source
@@ -114,6 +115,7 @@ DEPENDENCIES
   awesome_print
   builder (~> 3.0)
   byebug
+  classnames (~> 1.0)
   middleman (~> 4.1)
   middleman-blog (~> 4.0)
   middleman-pry

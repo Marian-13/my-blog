@@ -23,3 +23,7 @@ gem 'byebug'
 gem 'activesupport', '~> 5.0'
 
 gem 'awesome_print'
+
+# Port of JavaScript's classnames for Ruby
+# https://github.com/mikker/classnames
+gem 'classnames', '~> 1.0'

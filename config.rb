@@ -27,6 +27,9 @@ helpers ApplicationHelpers
 require_relative 'lib/article_helpers'
 helpers ArticleHelpers
 
+require_relative 'lib/css_classname_helpers'
+helpers CSSClassnameHelpers
+
 ###
 # Extentions
 ###
