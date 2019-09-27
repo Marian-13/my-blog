@@ -1,0 +1,15 @@
+<%# locals: [prev_page, next_page] %>
+
+<div class="d-flex justify-between">
+  <% link_to prev_page, class: cn('btn btn-primary', { 'invisible' => prev_page.blank? }) do %>
+    <%= '&larr;'.html_safe %>
+    <span class="d-none d-sm-inline">Newer Posts</span>
+  <% end %>
+
+  <div class="d-inline-block m-auto">Page <%= page_number %> of <%= num_pages %></div>
+
+  <% link_to next_page, class: cn('btn btn-primary', { 'invisible' => next_page.blank? }) do %>
+    <%= '&rarr;'.html_safe %>
+    <span class="d-none d-sm-inline">Older Posts</span>
+  <% end %>
+</div>
