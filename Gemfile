@@ -20,7 +20,7 @@ gem 'builder', '~> 3.0'
 
 gem 'byebug'
 
-gem 'activesupport', '~> 5.0'
+gem 'activesupport', '~> 6.1'
 
 gem 'awesome_print'
 
